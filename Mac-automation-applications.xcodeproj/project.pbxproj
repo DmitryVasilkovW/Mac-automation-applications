@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BFFCF2752BC5784D0017DF7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCF2742BC5784D0017DF7C /* main.swift */; };
+		BFFCF2812BC58D710017DF7C /* FileStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCF2802BC58D710017DF7C /* FileStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		BFFCF2712BC5784D0017DF7C /* Mac-automation-applications */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Mac-automation-applications"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFCF2742BC5784D0017DF7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BFFCF27B2BC5793D0017DF7C /* Mac-automation-applications-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac-automation-applications-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFFCF2802BC58D710017DF7C /* FileStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,27 @@
 		BFFCF2732BC5784D0017DF7C /* Mac-automation-applications */ = {
 			isa = PBXGroup;
 			children = (
+				BFFCF27E2BC58B140017DF7C /* File-related-programms */,
 				BFFCF2742BC5784D0017DF7C /* main.swift */,
+				BFFCF27B2BC5793D0017DF7C /* Mac-automation-applications-Bridging-Header.h */,
 			);
 			path = "Mac-automation-applications";
+			sourceTree = "<group>";
+		};
+		BFFCF27E2BC58B140017DF7C /* File-related-programms */ = {
+			isa = PBXGroup;
+			children = (
+				BFFCF27F2BC58B960017DF7C /* FinderFilesStatus */,
+			);
+			path = "File-related-programms";
+			sourceTree = "<group>";
+		};
+		BFFCF27F2BC58B960017DF7C /* FinderFilesStatus */ = {
+			isa = PBXGroup;
+			children = (
+				BFFCF2802BC58D710017DF7C /* FileStatus.swift */,
+			);
+			path = FinderFilesStatus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +115,7 @@
 				TargetAttributes = {
 					BFFCF2702BC5784D0017DF7C = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -121,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFFCF2752BC5784D0017DF7C /* main.swift in Sources */,
+				BFFCF2812BC58D710017DF7C /* FileStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +271,11 @@
 		BFFCF2792BC5784D0017DF7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac-automation-applications/Mac-automation-applications-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -257,8 +283,10 @@
 		BFFCF27A2BC5784D0017DF7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac-automation-applications/Mac-automation-applications-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
